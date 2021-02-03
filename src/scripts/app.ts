@@ -12,7 +12,6 @@ import { XWorld } from '../engine/sprite/XWorld';
 import { XGameController } from '../engine/state/XGameController';
 import { FpsMeter } from './fps-meter';
 import { TestGameController } from './test/TestGameController';
-import { DATGameController } from './game/DATGameController';
 import { XSignal } from '../engine/signals/XSignal';
 
 //------------------------------------------------------------------------------------------
@@ -146,7 +145,7 @@ export class Main {
             this.m_gameController = null;
         }
 
-        this.m_gameController = new DATGameController ();
+        this.m_gameController = new TestGameController ();
         this.m_gameController.setup (world, 0, 0.0);
         this.m_gameController.afterSetup ([]);
 

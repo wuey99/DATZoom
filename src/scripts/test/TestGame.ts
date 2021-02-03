@@ -29,9 +29,12 @@ import { XJustify } from '../../engine/ui/XJustify';
 import { Spacer } from '../../engine/ui/Spacer';
 import { XMLBox } from '../../engine/ui/XMLBox';
 import { G } from '../../engine/app/G';
+import { ZoomMtg } from "@zoomus/websdk";
 
 //------------------------------------------------------------------------------------------
 export class TestGame extends XState {
+	public static API_KEY:string = "Ji6MIz8SRCS8Kt82RMMcAA";
+	public static API_SECRET:string = "raaof6SKBey7QeaWUacMyQhbG5QgDos4Y7wI";
 
 //------------------------------------------------------------------------------------------	
 	constructor () {
@@ -51,131 +54,15 @@ export class TestGame extends XState {
 
 		console.log (": guid: ", GUID.create ());
 
-		/*
-		SFSManager.instance ().setup ();
+		//------------------------------------------------------------------------------------------
+		ZoomMtg.preLoadWasm();
+		ZoomMtg.prepareJssdk();
 
-		SFSManager.instance ().connect (
-			"127.0.0.1", 8080,
-			(e:SFS2X.SFSEvent) => {
-				console.log (": ----------------->: connected: ");
-			},
-			(e:SFS2X.SFSEvent) => {
-				console.log (": ----------------->: disconnected: ");
-			}
-		);
-
-		this.addTask ([
-			XTask.LABEL, "loop",
-				XTask.WAIT, 0x0100,
-
-				XTask.FLAGS, (__task:XTask) => {
-					__task.ifTrue (
-						SFSManager.instance ().isConnected ()
-					);
-				}, XTask.BNE, "loop",
-
-				() => {
-					console.log (": connected: ");
-
-					SFSManager.instance ().send (new SFS2X.LoginRequest("FozzieTheBear", "", null, "BasicExamples"));
-					SFSManager.instance ().once (SFS2X.SFSEvent.LOGIN, (e:SFS2X.SFSEvent) => {
-						console.log (": logged in: ", e);
-					});
-					SFSManager.instance ().once (SFS2X.LOGIN_ERROR, (e:SFS2X.SFSEvent) => {
-						console.log (": login error: ", e);
-					});
-				},
-
-				XTask.RETN,
-		]);
-		*/
-
+		//------------------------------------------------------------------------------------------
 		var __leader:FlockLeader = world.addGameObject (FlockLeader, 0, 0.0, false) as FlockLeader;
 		__leader.afterSetup ([]);
 
-		/*
-		var __testButton:XSpriteButton = this.addGameObjectAsChild (XSpriteButton, 0, 0.0, false) as XSpriteButton;
-		__testButton.afterSetup ([
-			"StandardButton",
-			true, 10, 250, 50
-		]);
-		this.horizontalPercent (__testButton, 0.50);
-		__testButton.y = 256;
-		*/
-
-		this.createBitmapFont (
-            "Aller",
-            {
-                fontFamily: "Nunito",
-                fontSize: 60,
-                strokeThickness: 0,
-                fill: "0xffffff",         
-            },
-            {chars: this.getBitmapFontChars ()}
-		);
-
-		/*
-		var __testButton2:XTextButton = this.addGameObjectAsChild (XTextButton, 0, 0.0, false) as XTextButton;
-		__testButton2.afterSetup ([
-			120,
-			64,
-			"press me",
-			"Aller",
-			100,
-			0x0000ff,
-			0xff0000,
-			0x00ff00,
-			0x0000ff,
-			0x0000ff,
-			false,
-			"center", "center"
-		]);
-		__testButton2.x = 512;
-		__testButton2.y = 512;
-		
-		var __testButton3:XTextSpriteButton = this.addGameObjectAsChild (XTextSpriteButton, 0, 0.0, false) as XTextSpriteButton;
-		__testButton3.afterSetup ([
-			"StandardButton",
-			true, 10, 300, 100,
-			"press me",
-			"Aller",
-			50,
-			0x0000ff,
-			0xff0000,
-			0x00ff00,
-			0x0000ff,
-			0x0000ff,
-			false,
-			"center", "center"
-		]);
-		__testButton3.x = 2732/2;
-		__testButton3.y = 512;
-
-		var __textSprite:XTextSprite = this.createXTextSprite (
-			120,
-			64,
-			"hello world",
-			"Aller",
-			100,
-			0xff0000,
-			true,
-			"center", "center"
-		);
-		this.addSortableChild (__textSprite, 0, 0.0, true);
-		__textSprite.x = 256;
-		__textSprite.y = 256;
-
-		var __textInput:TextInput = new TextInput (
-			{
-				input: {fontSize: '60px'}, 
-				box: {fill: 0xEEEEEE}
-			}
-		);
-		this.addSortableChild (__textInput, 0, 0.0, true);
-		__textInput.x = 1024;
-		__textInput.y = 768;
-		*/
-
+		//------------------------------------------------------------------------------------------
 		this.createBitmapFont (
 			"Nunito",
 			{
@@ -187,15 +74,99 @@ export class TestGame extends XState {
 			{chars: this.getBitmapFontChars ()}
 		);
 
-		var __xmlbox:XMLBox = this.addGameObjectAsChild (XMLBox, 0, 0.0, false) as XMLBox;
-		__xmlbox.afterSetup ([
-			1500, 1090, XJustify.NONE, 0xc0c0c0,
-			"<XMLBox>\n\t<VBox x=\"50%\" y=\"50%\" width=\"1000\" height=\"500\" depth+=\"500\" justify=\"space-between\" fill=\"0xffa0a0\">\n\t\t<TextSpriteButton\n\t\t\tx=\"50%\"\n\t\t\tbuttonClassName=\"StandardButton\"\n\t\t\t9slice=\"true\"\n\t\t\t9width=\"200\"\n\t\t\t9height=\"50\"\n\t\t\ttext=\"hellew\"\n\t\t\tfontName=\"Nunito\"\n\t\t\tfontSize=\"30\"\n\t\t\tcolorNormal=\"0x000000\"\n\t\t\tcolorOver=\"0x00ff00\"\n\t\t\tcolorDown=\"0x0000ff\"\n\t\t\tcolorSelected=\"0xff0000\"\n\t\t\tcolorDisabled=\"0xc0c0c0\"\n\t\t\tbold=\"true\"\n\t\t\thorizontAlignment=\"center\"\n\t\t\tverticalAlignment=\"center\"\n\t\t/>\n\t\t<TextButton\n\t\t\tx=\"50%\"\n\t\t\twidth=\"200\"\n\t\t\theight=\"50\"\n\t\t\ttext=\"hellew\"\n\t\t\tfontName=\"Nunito\"\n\t\t\tfontSize=\"30\"\n\t\t\tcolorNormal=\"0x000000\"\n\t\t\tcolorOver=\"0x00ff00\"\n\t\t\tcolorDown=\"0x0000ff\"\n\t\t\tcolorSelected=\"0xff0000\"\n\t\t\tcolorDisabled=\"0xc0c0c0\"\n\t\t\tbold=\"true\"\n\t\t\thorizontAlignment=\"center\"\n\t\t\tverticalAlignment=\"center\"\n\t\t/>\n\t\t<SpriteButton\n\t\t\tx=\"50%\"\n\t\t\tbuttonClassName=\"TestButton\"\n\t\t\t9slice=\"true\"\n\t\t\t9width=\"200\"\n\t\t\t9height=\"50\"\n\t\t/>\n\t</VBox>\n\t<AnimatedSprite\n\t\tx=\"25%\" y=\"25%\"\n\t\tclassName=\"TestImage\"\n\t/>\n</XMLBox>\n"
+		//------------------------------------------------------------------------------------------
+		var __hbox:HBox = this.addGameObjectAsChild (HBox, 0, 0.0, false) as HBox;
+		__hbox.afterSetup ([2000, 100, XJustify.START, 0xc0c0c0]);
+		__hbox.spacing = 15;
+		
+		//------------------------------------------------------------------------------------------
+		var __meetingInputLabel:XTextSprite = this.createXTextSprite (
+			-1,
+			-1,
+			"Meeting Number:",
+			"Nunito",
+			25,
+			0x000000,
+			true,
+			"center", "center"
+		);
 
+		__hbox.addItem (__meetingInputLabel);
+		__hbox.addSortableChild (__meetingInputLabel, 0, 0.0, false);
+		__hbox.verticalPercent (__meetingInputLabel, 0.50);
+
+		var __meetingNumberInput:TextInput = new TextInput (
+			{
+				input: {fontSize: '25px'}, 
+				box: {fill: 0xe0e0e0},
+			}
+		);
+		__hbox.addItem (__meetingNumberInput);
+		__hbox.addSortableChild (__meetingNumberInput, 0, 0.0, false);
+		__hbox.verticalPercent (__meetingNumberInput, 0.50);
+
+		//------------------------------------------------------------------------------------------
+		var __spacer:Spacer = __hbox.addGameObjectAsChild (Spacer, 0, 0.0, false) as Spacer;
+		__spacer.afterSetup ([32, 25]);
+		__hbox.addItem (__spacer);
+
+		//------------------------------------------------------------------------------------------
+		var __meetingPasswordLabel:XTextSprite = this.createXTextSprite (
+			-1,
+			-1,
+			"Meeting Password:",
+			"Nunito",
+			25,
+			0x000000,
+			true,
+			"center", "center"
+		);
+	
+		__hbox.addItem (__meetingPasswordLabel);
+		__hbox.addSortableChild (__meetingPasswordLabel, 0, 0.0, false);
+		__hbox.verticalPercent (__meetingPasswordLabel, 0.50);
+	
+		var __meetingPasswordInput:TextInput = new TextInput (
+			{
+				input: {fontSize: '25px'}, 
+				box: {fill: 0xe0e0e0},
+			}
+		);
+		__hbox.addItem (__meetingPasswordInput);
+		__hbox.addSortableChild (__meetingPasswordInput, 0, 0.0, false);
+		__hbox.verticalPercent (__meetingPasswordInput, 0.50);
+
+		//------------------------------------------------------------------------------------------
+		var __spacer:Spacer = __hbox.addGameObjectAsChild (Spacer, 0, 0.0, false) as Spacer;
+		__spacer.afterSetup ([32, 25]);
+		__hbox.addItem (__spacer);
+
+		//------------------------------------------------------------------------------------------
+		var __joinButton:XTextSpriteButton = __hbox.addGameObjectAsChild (XTextSpriteButton, 0, 0.0, false) as XTextSpriteButton;
+		__joinButton.afterSetup ([
+			"StandardButton",
+			true, 10, 150, 60,
+			"JOIN",
+			"Nunito",
+			25,
+			0x000000,
+			0x000000,
+			0x000000,
+			0x000000,
+			0x000000,
+			false,
+			"center", "center"
 		]);
+		__hbox.addItem (__joinButton);
+		__hbox.verticalPercent (__joinButton, 0.50);
 
-		this.horizontalPercent (__xmlbox, 0.50);
-		this.verticalPercent (__xmlbox, 0.50);
+		__joinButton.addMouseUpListener (() => {
+			this.joinMeeting ((__meetingNumberInput as any).text, (__meetingPasswordInput as any).text);
+		});
+
+		//------------------------------------------------------------------------------------------
+		this.horizontalPercent (__hbox, 0.50);
+		this.verticalPercent (__hbox, 0.15);
 
 		return this;
 	}
@@ -205,6 +176,22 @@ export class TestGame extends XState {
         super.cleanup ();
 	}
 	
+//------------------------------------------------------------------------------------------
+	public joinMeeting (__meetingNumber:string, __meetingPassword:string):void {
+		console.log (": join: ", __meetingNumber, __meetingPassword);
+
+		/*
+		const signature = ZoomMtg.generateSignature ({
+			meetingNumber: __meetingNumber,
+			apiKey: TestGame.API_KEY,
+			apiSecret: TestGame.API_SECRET,
+			role: "0",
+			success: (res) => {
+			console.log (": signature: ", res.result);
+			}
+		});
+		*/
+	}
 
 //------------------------------------------------------------------------------------------
 	public getActualWidth ():number {

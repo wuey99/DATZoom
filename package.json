@@ -1,19 +1,25 @@
 {
-  "name": "DAT",
-  "version": "0.1.0",
-  "description": "Dark Arcade Theater (DAT)",
+  "$schema": "http://json.schemastore.org/coffeelint",
+  "name": "websdk-local",
+  "version": "1.9.0",
+  "description": "Zoom sample app for web client WebSDK",
+  "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
-    "serve": "webpack-dev-server --hot",
-    "test": "mocha tests"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set NODE_ENV=development && set BABEL_ENV=development && webpack-dev-server --config webpack.config.dev.js --https false --watch",
+    "https": "set NODE_ENV=development && set BABEL_ENV=development && webpack-dev-server --config webpack.config.dev.js --https true --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wuey99/DAT.git"
-  },
-  "author": "wuey99@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
+  "keywords": [
+    "zoom",
+    "meeting",
+    "client",
+    "webclient",
+    "WebSDK"
+  ],
+  "author": "Jack Yang",
+  "license": "ISC",
+  "dependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.1.1",
     "cross-env": "^7.0.2",
@@ -23,20 +29,36 @@
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "@zoomus/websdk": "1.9.0",
+    "lodash": "^4.17.14",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-redux": "7.1.0",
+    "redux": "3.7.2",
+    "redux-thunk": "2.2.0"
   },
-  "dependencies": {
-    "@types/howler": "2.2.1",
-    "@types/matter-js": "^0.14.5",
-    "@zoomus/websdk": "^1.9.0",
-    "fast-xml-parser": "^3.17.4",
-    "he": "^1.2.0",
-    "howler": "^2.2.0",
-    "matter-js": "^0.14.2",
-    "pixi-textinput-v5": "^4.0.0-beta.10",
-    "pixi.js-legacy": "^5.3.3",
-    "poly-decomp": "^0.3.0",
-    "polygon-clipping": "^0.15.1",
-    "sfs2x-api": "1.7.10"
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-stage-0": "^7.0.0",
+    "@babel/preset-stage-1": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-airbnb": "^3.0.1",
+    "css-loader": "^1.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }
