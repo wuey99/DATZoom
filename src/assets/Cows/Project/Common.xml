@@ -1,0 +1,106 @@
+<manifest>
+  <folder name="root">
+    <folder name="system">
+      <resource name="XLogicObjectXMap" type=".as" path="Common\\Containers\\XLogicObjectXMap" src="XLogicObjectXMap.as" dst="XLogicObjectXMap.swf">
+        <classX name="XLogicObjectXMap"/>
+      </resource>
+      <resource name="ErrorImages" type=".fla" path="Common\\Images\\Error" src="ErrorImages.fla" dst="ErrorImages.swf">
+        <classX name="undefinedClass"/>
+      </resource>
+      <resource name="ManipulatorRings" type=".fla" path="Common\\Tiki\\UI\\ManipulatorRings" src="ManipulatorRings.fla" dst="ManipulatorRings.swf">
+        <classX name="Pickup_Ring"/>
+        <classX name="Move_Ring"/>
+        <classX name="Resize_Ring"/>
+        <classX name="Rotate_Ring"/>
+      </resource>
+      <resource name="Cursors" type=".fla" path="Common\\Images\\Cursors" src="cursors.fla" dst="cursors.swf">
+        <classX name="CursorClass"/>
+      </resource>
+      <resource name="TikiXMapEditorIcons" type=".fla" path="Common\\Tiki\\UI\\TikiXMapEditorIcons" src="TikiXMapEditorIcons.fla" dst="TikiXMapEditorIcons.swf">
+        <classX name="Pointer_Button"/>
+        <classX name="Hand_Button"/>
+        <classX name="Zoom_Button"/>
+        <classX name="Cross_Button"/>
+        <classX name="DocumentSave_Button"/>
+        <classX name="Tiles_Button"/>
+        <classX name="Test_Button"/>
+      </resource>
+      <resource name="ItemGrabber" type=".fla" path="Common\\Tiki\\UI\\ItemGrabber" src="ItemGrabber.fla" dst="ItemGrabber.swf">
+        <classX name="ItemGrabber"/>
+      </resource>
+      <resource name="RotatingXLogicObject" type=".as" path="Common\\Test\\RotatingXLogicObject" src="RotatingXLogicObject.as" dst="RotatingXLogicObject.swf">
+        <classX name="RotatingXLogicObject"/>
+      </resource>
+      <resource name="RotatingXLogicObject2" type=".as" path="Common\\Test\\RotatingXLogicObject2" src="RotatingXLogicObject2.as" dst="RotatingXLogicObject2.swf">
+        <classX name="RotatingXLogicObject2"/>
+      </resource>
+      <resource name="CX" type=".fla" path="Common\\CX" src="CX.fla" dst="CX.swf">
+        <classX name="CXClass"/>
+        <classX name="CX_SOLID"/>
+        <classX name="CX_SOFT"/>
+        <classX name="CX_JUMP_THRU"/>
+        <classX name="CX_UL45"/>
+        <classX name="CX_UR45"/>
+        <classX name="CX_LL45"/>
+        <classX name="CX_LR45"/>
+        <classX name="CX_UL225"/>
+        <classX name="CX_UR225"/>
+        <classX name="CX_LL225"/>
+        <classX name="CX_LR225"/>
+        <classX name="CX_UL675"/>
+        <classX name="CX_UR675"/>
+        <classX name="CX_LL675"/>
+        <classX name="CX_LR675"/>
+        <classX name="CX_SOFTLF"/>
+        <classX name="CX_SOFTRT"/>
+        <classX name="CX_SOFTUP"/>
+        <classX name="CX_SOFTDN"/>
+        <classX name="CX_SOLIDX001"/>
+        <classX name="CX_DEATH"/>
+        <classX name="CX_ICE"/>
+      </resource>
+    </folder>
+    <folder name="sprites">
+      <folder name="Common">
+        <folder name="ui">
+          <resource name="@StandardButton" type=".pmp" embed="false" path="Common" src="F664A9D2-6DC1-02B2-93BC-170C0C94E2B7-StandardButton.pmp" dst="F664A9D2-6DC1-02B2-93BC-170C0C94E2B7-StandardButton.pmp" pmp_width="512" originX="215" originY="252" width="90" totalWidth="450" height="31" regX="0" regY="0"/>
+          <resource name="png_StandardButton" type=".png" embed="false" path="Common" src="F664A9D2-6DC1-02B2-93BC-170C0C94E2B7-StandardButton.png" dst="F664A9D2-6DC1-02B2-93BC-170C0C94E2B7-StandardButton.png"/>
+          <resource name="$StandardButton" type=".json" embed="false" path="Common" src="F664A9D2-6DC1-02B2-93BC-170C0C94E2B7-StandardButton.json" dst="F664A9D2-6DC1-02B2-93BC-170C0C94E2B7-StandardButton.json"/>
+          <resource name="StandardButton" type=".fla" embed="false" path="Common" src="EA5C79D3-9FEC-3323-F2E9-6C767A17C0CE-StandardButton.fla" dst="EA5C79D3-9FEC-3323-F2E9-6C767A17C0CE-StandardButton.swf">
+            <classX name="StandardButton" regX="0" regY="0" width="32" height="32"/>
+          </resource>
+        </folder>
+      </folder>
+      <folder name="Test">
+        <resource name="@OctopusBug" type=".pmp" embed="false" path="Common" src="8C75E876-FB3A-BF9C-478A-64948BCE7B97-OctopusBug.pmp" dst="8C75E876-FB3A-BF9C-478A-64948BCE7B97-OctopusBug.pmp" pmp_width="512" originX="192" originY="184" width="144" totalWidth="2304" height="138" regX="-65" regY="-72"/>
+        <resource name="png_OctopusBug" type=".png" embed="false" path="Common" src="8C75E876-FB3A-BF9C-478A-64948BCE7B97-OctopusBug.png" dst="8C75E876-FB3A-BF9C-478A-64948BCE7B97-OctopusBug.png"/>
+        <resource name="$OctopusBug" type=".json" embed="false" path="Common" src="8C75E876-FB3A-BF9C-478A-64948BCE7B97-OctopusBug.json" dst="8C75E876-FB3A-BF9C-478A-64948BCE7B97-OctopusBug.json"/>
+        <resource name="OctopusBug" type=".fla" embed="false" path="Common" src="B2D8B6D7-1F2B-E40E-1280-5D9F0FA4BFF4-OctopusBug.fla" dst="B2D8B6D7-1F2B-E40E-1280-5D9F0FA4BFF4-OctopusBug.swf">
+          <classX name="OctopusBug" regX="0" regY="0" width="32" height="32"/>
+        </resource>
+        <resource name="@TestButton" type=".pmp" embed="false" path="Common" src="F443FA5D-FB53-8763-C2F1-51B2A676C243-TestButton.pmp" dst="F443FA5D-FB53-8763-C2F1-51B2A676C243-TestButton.pmp" pmp_width="512" originX="168" originY="218" width="125" totalWidth="625" height="50" regX="0" regY="0"/>
+        <resource name="png_TestButton" type=".png" embed="false" path="Common" src="F443FA5D-FB53-8763-C2F1-51B2A676C243-TestButton.png" dst="F443FA5D-FB53-8763-C2F1-51B2A676C243-TestButton.png"/>
+        <resource name="$TestButton" type=".json" embed="false" path="Common" src="F443FA5D-FB53-8763-C2F1-51B2A676C243-TestButton.json" dst="F443FA5D-FB53-8763-C2F1-51B2A676C243-TestButton.json"/>
+        <resource name="TestButton" type=".fla" embed="false" path="Common" src="B10501A5-8A43-4214-F22E-1107A0AB39B1-TestButton.fla" dst="B10501A5-8A43-4214-F22E-1107A0AB39B1-TestButton.swf">
+          <classX name="TestButton" regX="0" regY="0" width="32" height="32"/>
+        </resource>
+        <resource name="@TestButtonToo" type=".pmp" embed="false" path="Common" src="F3171504-B336-A968-BEDA-0B262E34A2BA-TestButtonToo.pmp" dst="F3171504-B336-A968-BEDA-0B262E34A2BA-TestButtonToo.pmp" pmp_width="512" originX="142" originY="202" width="250" totalWidth="1250" height="100" regX="0" regY="0"/>
+        <resource name="png_TestButtonToo" type=".png" embed="false" path="Common" src="F3171504-B336-A968-BEDA-0B262E34A2BA-TestButtonToo.png" dst="F3171504-B336-A968-BEDA-0B262E34A2BA-TestButtonToo.png"/>
+        <resource name="$TestButtonToo" type=".json" embed="false" path="Common" src="F3171504-B336-A968-BEDA-0B262E34A2BA-TestButtonToo.json" dst="F3171504-B336-A968-BEDA-0B262E34A2BA-TestButtonToo.json"/>
+        <resource name="TestButtonToo" type=".fla" embed="false" path="Common" src="CE90AE75-8210-3636-9474-F502A0F84935-TestButtonToo.fla" dst="CE90AE75-8210-3636-9474-F502A0F84935-TestButtonToo.swf">
+          <classX name="TestButtonToo" regX="0" regY="0" width="32" height="32"/>
+        </resource>
+        <resource name="@TestImage" type=".pmp" embed="false" path="Common" src="0BEA0ADC-3601-C96B-6904-1A2BD544FE2F-TestImage.pmp" dst="0BEA0ADC-3601-C96B-6904-1A2BD544FE2F-TestImage.pmp" pmp_width="1024" originX="203" originY="333" width="660" totalWidth="660" height="350" regX="-330" regY="-175"/>
+        <resource name="png_TestImage" type=".png" embed="false" path="Common" src="0BEA0ADC-3601-C96B-6904-1A2BD544FE2F-TestImage.png" dst="0BEA0ADC-3601-C96B-6904-1A2BD544FE2F-TestImage.png"/>
+        <resource name="$TestImage" type=".json" embed="false" path="Common" src="0BEA0ADC-3601-C96B-6904-1A2BD544FE2F-TestImage.json" dst="0BEA0ADC-3601-C96B-6904-1A2BD544FE2F-TestImage.json"/>
+        <resource name="TestImage" type=".fla" embed="false" path="Common" src="A17294C1-46B9-286E-E770-919CC22C62F0-TestImage.fla" dst="A17294C1-46B9-286E-E770-919CC22C62F0-TestImage.swf">
+          <classX name="TestImage" regX="0" regY="0" width="32" height="32"/>
+        </resource>
+      </folder>
+      <folder name="startup"/>
+    </folder>
+    <folder name="Sketches">
+      <resource name="#Sketch001" type=".pmp" embed="false" path="Common" src="65B9669A-4F2D-D829-78C6-615EF4C5F524-Sketch001.pmp" dst="65B9669A-4F2D-D829-78C6-615EF4C5F524-Sketch001.pmp"/>
+    </folder>
+  </folder>
+</manifest>

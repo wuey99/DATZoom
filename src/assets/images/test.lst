@@ -1,0 +1,245 @@
+{
+	name: "Clock_AgathaSaxCoburn_Intro",
+	type: "ImageResource",
+	path: "images/Aggie Intro/Clock_AgathaSaxCoburn_Intro.png",
+},
+{
+	name: "Location_AgathaSaxCoburn_Intro",
+	type: "ImageResource",
+	path: "images/Aggie Intro/Location_AgathaSaxCoburn_Intro.png",
+},
+{
+	name: "LuciaGuage_AgathaSaxCoburn_Intro",
+	type: "ImageResource",
+	path: "images/Aggie Intro/LuciaGuage_AgathaSaxCoburn_Intro.png",
+},
+{
+	name: "Profile_AgathaSaxCoburn_Intro",
+	type: "ImageResource",
+	path: "images/Aggie Intro/Profile_AgathaSaxCoburn_Intro.png",
+},
+{
+	name: "SavageHall_AgathaSaxCoburn_Intro",
+	type: "ImageResource",
+	path: "images/Aggie Intro/SavageHall_AgathaSaxCoburn_Intro.png",
+},
+{
+	name: "TalismansInUse_AgathaSaxCoburn_Intro",
+	type: "ImageResource",
+	path: "images/Aggie Intro/TalismansInUse_AgathaSaxCoburn_Intro.png",
+},
+{
+	name: "WW2_AgathaSaxCoburn_Intro",
+	type: "ImageResource",
+	path: "images/Aggie Intro/WW2_AgathaSaxCoburn_Intro.png",
+},
+{
+	name: "Clock_PillipCalloway_Intro",
+	type: "ImageResource",
+	path: "images/Calloway Intro/Clock_PillipCalloway_Intro.png",
+},
+{
+	name: "Location_PillipCalloway_Intro",
+	type: "ImageResource",
+	path: "images/Calloway Intro/Location_PillipCalloway_Intro.png",
+},
+{
+	name: "LuciaGuage_PillipCalloway_Intro",
+	type: "ImageResource",
+	path: "images/Calloway Intro/LuciaGuage_PillipCalloway_Intro.png",
+},
+{
+	name: "Profile_PillipCalloway_Intro",
+	type: "ImageResource",
+	path: "images/Calloway Intro/Profile_PillipCalloway_Intro.png",
+},
+{
+	name: "SavageHall_PillipCalloway_Intro",
+	type: "ImageResource",
+	path: "images/Calloway Intro/SavageHall_PillipCalloway_Intro.png",
+},
+{
+	name: "TalismansInUse_PillipCalloway_Intro",
+	type: "ImageResource",
+	path: "images/Calloway Intro/TalismansInUse_PillipCalloway_Intro.png",
+},
+{
+	name: "Thumbs.db",
+	type: "ImageResource",
+	path: "images/Calloway Intro/Thumbs.db",
+},
+{
+	name: "WW2_PillipCalloway_Intro",
+	type: "ImageResource",
+	path: "images/Calloway Intro/WW2_PillipCalloway_Intro.png",
+},
+{
+	name: "Clock_CharlesGoodwin_Intro",
+	type: "ImageResource",
+	path: "images/Goodwin Intro/Clock_CharlesGoodwin_Intro.png",
+},
+{
+	name: "Location_CharlesGoodwin_Intro",
+	type: "ImageResource",
+	path: "images/Goodwin Intro/Location_CharlesGoodwin_Intro.png",
+},
+{
+	name: "LuciaGuage_CharlesGoodwin_Intro",
+	type: "ImageResource",
+	path: "images/Goodwin Intro/LuciaGuage_CharlesGoodwin_Intro.png",
+},
+{
+	name: "Profile_CharlesGoodwin_Intro",
+	type: "ImageResource",
+	path: "images/Goodwin Intro/Profile_CharlesGoodwin_Intro.png",
+},
+{
+	name: "SavageHall_CharlesGoodwin_Intro",
+	type: "ImageResource",
+	path: "images/Goodwin Intro/SavageHall_CharlesGoodwin_Intro.png",
+},
+{
+	name: "TalismansInUse_CharlesGoodwin_Intro",
+	type: "ImageResource",
+	path: "images/Goodwin Intro/TalismansInUse_CharlesGoodwin_Intro.png",
+},
+{
+	name: "WW2_CharlesGoodwin_Intro",
+	type: "ImageResource",
+	path: "images/Goodwin Intro/WW2_CharlesGoodwin_Intro.png",
+},
+{
+	name: "Clock_GraceSavage_Intro",
+	type: "ImageResource",
+	path: "images/Grace Intro/Clock_GraceSavage_Intro.png",
+},
+{
+	name: "Location_GraceSavage_Intro",
+	type: "ImageResource",
+	path: "images/Grace Intro/Location_GraceSavage_Intro.png",
+},
+{
+	name: "LuciaGuage_GraceSavage_Intro",
+	type: "ImageResource",
+	path: "images/Grace Intro/LuciaGuage_GraceSavage_Intro.png",
+},
+{
+	name: "Profile_GraceSavage_Intro",
+	type: "ImageResource",
+	path: "images/Grace Intro/Profile_GraceSavage_Intro.png",
+},
+{
+	name: "SavageHall_GraceSavage_Intro",
+	type: "ImageResource",
+	path: "images/Grace Intro/SavageHall_GraceSavage_Intro.png",
+},
+{
+	name: "TalismansInUse_GraceSavage_Intro",
+	type: "ImageResource",
+	path: "images/Grace Intro/TalismansInUse_GraceSavage_Intro.png",
+},
+{
+	name: "WW2_GraceSavage_Intro",
+	type: "ImageResource",
+	path: "images/Grace Intro/WW2_GraceSavage_Intro.png",
+},
+{
+	name: "Clock_IsaacSavage_Intro",
+	type: "ImageResource",
+	path: "images/Isaac Intro/Clock_IsaacSavage_Intro.png",
+},
+{
+	name: "Location_IsaacSavage_Intro",
+	type: "ImageResource",
+	path: "images/Isaac Intro/Location_IsaacSavage_Intro.png",
+},
+{
+	name: "LuciaGuage_IsaacSavage_Intro",
+	type: "ImageResource",
+	path: "images/Isaac Intro/LuciaGuage_IsaacSavage_Intro.png",
+},
+{
+	name: "Profile_IsaacSavage_Intro",
+	type: "ImageResource",
+	path: "images/Isaac Intro/Profile_IsaacSavage_Intro.png",
+},
+{
+	name: "SavageHall_IsaacSavage_Intro",
+	type: "ImageResource",
+	path: "images/Isaac Intro/SavageHall_IsaacSavage_Intro.png",
+},
+{
+	name: "TalismansInUse_IsaacSavage_Intro",
+	type: "ImageResource",
+	path: "images/Isaac Intro/TalismansInUse_IsaacSavage_Intro.png",
+},
+{
+	name: "WW2_IsaacSavage_Intro",
+	type: "ImageResource",
+	path: "images/Isaac Intro/WW2_IsaacSavage_Intro.png",
+},
+{
+	name: "Clock_AudryMarcel_Intro",
+	type: "ImageResource",
+	path: "images/Marcel Intro/Clock_AudryMarcel_Intro.png",
+},
+{
+	name: "Location_AudryMarcel_Intro(1)",
+	type: "ImageResource",
+	path: "images/Marcel Intro/Location_AudryMarcel_Intro(1).png",
+},
+{
+	name: "Location_AudryMarcel_Intro",
+	type: "ImageResource",
+	path: "images/Marcel Intro/Location_AudryMarcel_Intro.png",
+},
+{
+	name: "LuciaGuage_AudryMarcel_Intro(1)",
+	type: "ImageResource",
+	path: "images/Marcel Intro/LuciaGuage_AudryMarcel_Intro(1).png",
+},
+{
+	name: "LuciaGuage_AudryMarcel_Intro",
+	type: "ImageResource",
+	path: "images/Marcel Intro/LuciaGuage_AudryMarcel_Intro.png",
+},
+{
+	name: "Profle_AudryMarcel_Intro(1)",
+	type: "ImageResource",
+	path: "images/Marcel Intro/Profle_AudryMarcel_Intro(1).png",
+},
+{
+	name: "Profle_AudryMarcel_Intro",
+	type: "ImageResource",
+	path: "images/Marcel Intro/Profle_AudryMarcel_Intro.png",
+},
+{
+	name: "SavageHall_AudryMarcel_Intro(1)",
+	type: "ImageResource",
+	path: "images/Marcel Intro/SavageHall_AudryMarcel_Intro(1).png",
+},
+{
+	name: "SavageHall_AudryMarcel_Intro",
+	type: "ImageResource",
+	path: "images/Marcel Intro/SavageHall_AudryMarcel_Intro.png",
+},
+{
+	name: "TalismansInUse_AudryMarcel_Intro(1)",
+	type: "ImageResource",
+	path: "images/Marcel Intro/TalismansInUse_AudryMarcel_Intro(1).png",
+},
+{
+	name: "TalismansInUse_AudryMarcel_Intro",
+	type: "ImageResource",
+	path: "images/Marcel Intro/TalismansInUse_AudryMarcel_Intro.png",
+},
+{
+	name: "WW2_AudryMarcel_Intro(1)",
+	type: "ImageResource",
+	path: "images/Marcel Intro/WW2_AudryMarcel_Intro(1).png",
+},
+{
+	name: "WW2_AudryMarcel_Intro",
+	type: "ImageResource",
+	path: "images/Marcel Intro/WW2_AudryMarcel_Intro.png",
+},

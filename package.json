@@ -1,0 +1,42 @@
+{
+  "name": "DAT",
+  "version": "0.1.0",
+  "description": "Dark Arcade Theater (DAT)",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "serve": "webpack-dev-server --hot",
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wuey99/DAT.git"
+  },
+  "author": "wuey99@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "cross-env": "^7.0.2",
+    "mocha": "^7.1.1",
+    "mocha-loader": "^5.0.0",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "@types/howler": "2.2.1",
+    "@types/matter-js": "^0.14.5",
+    "@zoomus/websdk": "^1.9.0",
+    "fast-xml-parser": "^3.17.4",
+    "he": "^1.2.0",
+    "howler": "^2.2.0",
+    "matter-js": "^0.14.2",
+    "pixi-textinput-v5": "^4.0.0-beta.10",
+    "pixi.js-legacy": "^5.3.3",
+    "poly-decomp": "^0.3.0",
+    "polygon-clipping": "^0.15.1",
+    "sfs2x-api": "1.7.10"
+  }
+}
