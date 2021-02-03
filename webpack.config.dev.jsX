@@ -9,11 +9,18 @@ const isDev = process.env.NODE_ENV !== 'production';
 module.exports = {
     devtool: 'eval',
     entry: {
-	index: ['./src/scripts/index.js'],
-	meeting: ['./src/scripts/meeting.js'],
+        index: [
+            './src/scripts/index.js'
+        ],
+        meeting: [
+            './src/scripts/meeting.js'
+        ]
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, '/static'),
+        publicPath: '/static',
+        hashDigestLength: 5,
+        // filename: `zoom-meeting-${buildVersion}-[name]-[chunkhash].min.js`,
         filename: '[name].min.js'
     },
     module: {
@@ -84,7 +91,6 @@ module.exports = {
         new CleanWebpackPlugin(),
         new CopyPlugin([
             { from: 'src/index.html' },
-            { from: 'src/meeting.html' },
             { from: 'src/css/style.css', to: 'css/' },
             { from: 'src/assets/images', to: 'images' },
             { from: 'src/assets/audio', to: 'audio' },

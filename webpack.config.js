@@ -1,24 +1,27 @@
 const path = require('path');
+const webpack = require('webpack');
+const args = process.argv.slice(2);
+const https = args[2] === '--https' && args[3] === 'true';
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const isDev = process.env.NODE_ENV !== 'production';
 
-const config = {
-    mode: isDev ? 'development' : 'production',
-    entry: './src/scripts/app.ts',
+module.exports = {
+    devtool: 'eval',
+    entry: {
+	index: ['./src/scripts/index.js'],
+	meeting: ['./src/scripts/meeting.js'],
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
-    },
-    resolve: {
-        extensions: ['.tsx', '.ts', '.js', '.jsx']
+        filename: '[name].min.js'
     },
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
                 loader: 'ts-loader',
-                exclude: /node_modules/
+                exclude: /node_modules/,
             },
             {
                 test: /\.jsx?$/,
@@ -43,6 +46,9 @@ const config = {
             }
         ]
     },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx']
+    },
     externals: {
         'babel-polyfill': 'babel-polyfill',
         react: 'React',
@@ -56,25 +62,38 @@ const config = {
             var: '_'
         }
     },
+    context: __dirname,
+    target: 'web',
+    devServer: {
+        https,
+        cert: './localhost.crt',
+        key: './localhost.key',
+        host: '0.0.0.0',
+        port: 9999,
+        hot: true,
+        overlay: true,
+        historyApiFallback: false,
+        watchContentBase: true,
+        disableHostCheck: true,
+        headers: {
+            'Access-Control-Allow-Origin': https ? 'https://0.0.0.0:9999' : 'http://0.0.0.0:9999'
+        }
+    },
+    mode: 'development',
     plugins: [
         new CleanWebpackPlugin(),
         new CopyPlugin([
             { from: 'src/index.html' },
+            { from: 'src/meeting.html' },
             { from: 'src/css/style.css', to: 'css/' },
             { from: 'src/assets/images', to: 'images' },
             { from: 'src/assets/audio', to: 'audio' },
             { from: 'src/assets/Cows/Project', to: 'assets' },
         ]),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('development'),
+            'process.env.BABEL_ENV': JSON.stringify('development'),
+        })
     ],
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
-        port: 4000,
-        hot: true
-    },
-    optimization: {
-        minimize: !isDev
-      }
 };
-
-module.exports = config;
