@@ -8,7 +8,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
     devtool: 'eval',
-    entry: './src/scripts/test.js',
+    entry: './src/scripts/app.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
