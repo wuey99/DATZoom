@@ -13,4 +13,4 @@ window.onload = () => {
     __main.setup ();
 } 
 
-ReactDOM.render(<Game/>, document.getElementById('root'));
+// ReactDOM.render(<Game/>, document.getElementById('root'));

@@ -180,17 +180,64 @@ export class TestGame extends XState {
 	public joinMeeting (__meetingNumber:string, __meetingPassword:string):void {
 		console.log (": join: ", __meetingNumber, __meetingPassword);
 
-		/*
 		const signature = ZoomMtg.generateSignature ({
 			meetingNumber: __meetingNumber,
 			apiKey: TestGame.API_KEY,
 			apiSecret: TestGame.API_SECRET,
 			role: "0",
 			success: (res) => {
-			console.log (": signature: ", res.result);
+				console.log (": signature: ", res.result);
+
+				this.beginJoin(res.result, {
+					apiKey: TestGame.API_KEY,
+					meetingNumber: __meetingNumber,
+					leaveUrl: "http://www.slashdot.org",
+					userName: "test",
+					userEmail: "wuey99@gmail.com",
+					passWord: __meetingPassword,
+					role: 0,
+					lang: "en"
+				});
 			}
 		});
-		*/
+	}
+
+//------------------------------------------------------------------------------------------
+	public beginJoin(signature:string, meetingConfig:any):void {
+		ZoomMtg.init({
+		  leaveUrl: meetingConfig.leaveUrl,
+		  webEndpoint: meetingConfig.webEndpoint,
+		  success: function () {
+			console.log(meetingConfig);
+			console.log("signature", signature);
+			ZoomMtg.i18n.load(meetingConfig.lang);
+			ZoomMtg.i18n.reload(meetingConfig.lang);
+			ZoomMtg.join({
+			  meetingNumber: meetingConfig.meetingNumber,
+			  userName: meetingConfig.userName,
+			  signature: signature,
+			  apiKey: meetingConfig.apiKey,
+			  userEmail: meetingConfig.userEmail,
+			  passWord: meetingConfig.passWord,
+			  success: function (res) {
+				console.log("join meeting success");
+				console.log("get attendeelist");
+				ZoomMtg.getAttendeeslist({});
+				ZoomMtg.getCurrentUser({
+				  success: function (res) {
+					console.log("success getCurrentUser", res.result.currentUser);
+				  },
+				});
+			  },
+			  error: function (res) {
+				console.log(res);
+			  },
+			});
+		  },
+		  error: function (res) {
+			console.log(res);
+		  },
+		});
 	}
 
 //------------------------------------------------------------------------------------------
