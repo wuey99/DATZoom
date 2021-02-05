@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Game from './Game';
 import { Main } from './app';
+import { ZoomMtg } from "@zoomus/websdk";
 
 window.onload = () => {
     var __main = new Main (
@@ -11,6 +12,6 @@ window.onload = () => {
     );
 
     __main.setup ();
-} 
 
-// ReactDOM.render(<Game/>, document.getElementById('root'));
+    console.log (": test.js: ", document.getElementById("zmmtg-root"), document.getElementById("game"), document.getElementById("aria-notify-area"));
+} 

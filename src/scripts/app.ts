@@ -24,7 +24,6 @@ export var world:XWorld;
 let fpsMeter: FpsMeter;
 
 //------------------------------------------------------------------------------------------
-/*
 window.onload = () => {
     var __main:Main = new Main (
         {
@@ -33,8 +32,9 @@ window.onload = () => {
     );
 
     __main.setup ();
+
+    console.log (": test.js: ", document.getElementById("zmmtg-root"), document.getElementById("game"), document.getElementById("aria-notify-area"));
 } 
-*/
 
 //------------------------------------------------------------------------------------------
 export class Main {
