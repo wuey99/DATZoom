@@ -55,6 +55,7 @@ export class TestGame extends XState {
 		console.log (": guid: ", GUID.create ());
 
 		//------------------------------------------------------------------------------------------
+		ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.9.0/lib', '/av'); 
 		ZoomMtg.preLoadWasm();
 		ZoomMtg.prepareJssdk();
 
@@ -76,7 +77,7 @@ export class TestGame extends XState {
 
 		//------------------------------------------------------------------------------------------
 		var __hbox:HBox = this.addGameObjectAsChild (HBox, 0, 0.0, false) as HBox;
-		__hbox.afterSetup ([2000, 100, XJustify.START, 0xc0c0c0]);
+		__hbox.afterSetup ([1500, 100, XJustify.START, 0xc0c0c0]);
 		__hbox.spacing = 15;
 		
 		//------------------------------------------------------------------------------------------
@@ -85,7 +86,7 @@ export class TestGame extends XState {
 			-1,
 			"Meeting Number:",
 			"Nunito",
-			25,
+			50,
 			0x000000,
 			true,
 			"center", "center"
@@ -97,7 +98,7 @@ export class TestGame extends XState {
 
 		var __meetingNumberInput:TextInput = new TextInput (
 			{
-				input: {fontSize: '25px'}, 
+				input: {fontSize: '50px'}, 
 				box: {fill: 0xe0e0e0},
 			}
 		);
@@ -107,7 +108,7 @@ export class TestGame extends XState {
 
 		//------------------------------------------------------------------------------------------
 		var __spacer:Spacer = __hbox.addGameObjectAsChild (Spacer, 0, 0.0, false) as Spacer;
-		__spacer.afterSetup ([32, 25]);
+		__spacer.afterSetup ([32, 50]);
 		__hbox.addItem (__spacer);
 
 		//------------------------------------------------------------------------------------------
@@ -116,7 +117,7 @@ export class TestGame extends XState {
 			-1,
 			"Meeting Password:",
 			"Nunito",
-			25,
+			50,
 			0x000000,
 			true,
 			"center", "center"
@@ -128,7 +129,7 @@ export class TestGame extends XState {
 	
 		var __meetingPasswordInput:TextInput = new TextInput (
 			{
-				input: {fontSize: '25px'}, 
+				input: {fontSize: '50px'}, 
 				box: {fill: 0xe0e0e0},
 			}
 		);
@@ -138,17 +139,17 @@ export class TestGame extends XState {
 
 		//------------------------------------------------------------------------------------------
 		var __spacer:Spacer = __hbox.addGameObjectAsChild (Spacer, 0, 0.0, false) as Spacer;
-		__spacer.afterSetup ([32, 25]);
+		__spacer.afterSetup ([32, 50]);
 		__hbox.addItem (__spacer);
 
 		//------------------------------------------------------------------------------------------
 		var __joinButton:XTextSpriteButton = __hbox.addGameObjectAsChild (XTextSpriteButton, 0, 0.0, false) as XTextSpriteButton;
 		__joinButton.afterSetup ([
 			"StandardButton",
-			true, 10, 150, 60,
+			true, 10, 200, 100,
 			"JOIN",
 			"Nunito",
-			25,
+			75,
 			0x000000,
 			0x000000,
 			0x000000,
